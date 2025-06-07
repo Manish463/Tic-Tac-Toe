@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div class="score-box">
+            <div class="o">
+                <i class="fa-solid fa-o"></i>
+                <p><input type="number" disabled>Wins</p>
+            </div>
+            <div class="x">
+                <i class="fa-solid fa-x"></i>
+                <p><input type="number" disabled>Wins</p>
+            </div>
+            <div class="draw">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <p><input type="number" disabled>Draws</p>
+            </div>
+        </div>
+        <div class="game-box">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+            <div class="box box6"></div>
+            <div class="box box7"></div>
+            <div class="box box8"></div>
+            <div class="box box9"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav">
+            <div class="turn-box">
+                <div class="turn">
+                    <i class="fa-solid fa-x"></i>
+                    <div class="crl"></div>
+                    <i class="fa-solid fa-o"></i>
+                </div>
+            </div>
+            <div class="btns">
+                <div class="reset">Reset</div>
+                <div class="newGame">New Game</div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

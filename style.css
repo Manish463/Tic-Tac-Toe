@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+}
+body{
+    min-height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornsilk;
+}
+
+/* Landing Page (index.html) */
+.popup{
+    height: 80vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+form{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.choose{
+    height: 45%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.icon{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 5rem;
+}
+.icon .fa-o{
+    color: #2ccece;
+}
+.icon .fa-x{
+    color: #0a6ceb;
+}
+.inp{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+input[type="radio"] {
+    width: 1.7rem;
+    height: 1.7rem;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid rgb(0, 145, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="radio"]:checked::before {
+    content: '';
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(0, 145, 255);
+    border-radius: 50%;
+}
+.cnt_btn{
+    height: 3em;
+    width: 7em;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0px 0px 5px 0px rgb(130, 122, 122);
+    background-color: #fff;
+}
+/* Game Page (gamepage.html) */
+.container{
+    height: 47.5vw;
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+/* score box */
+.score-box{
+    height: 10%;
+    width: 90%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.o, .x, .draw{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+.o, .o input{
+    color: #2ccece;
+}
+.x, .x input{
+    color: #0a6ceb;
+}
+.draw, .draw input{
+    color: rgb(105, 62, 62);
+}
+.score-box i{
+    font-size: 1.8em;
+}
+.score-box input{
+    width: 2.5em;
+    text-align: right;
+    border: none;
+    background-color: cornsilk;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+/* game box */
+.game-box{
+    height: 310px;
+    width: 310px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+    position: relative;
+}
+.line{
+    height: 10px;
+    border-radius: 5px;
+    background-color: #1ea2e5;
+    position: absolute;
+}
+.box{
+    height: calc(100% / 3);
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5em;
+}
+.box2, .box5, .box8{
+    border-left: 3px solid rgb(172, 166, 166);
+    border-right: 3px solid rgb(172, 166, 166);
+}
+.box4, .box5, .box6{
+    border-top: 3px solid rgb(172, 166, 166);
+    border-bottom: 3px solid rgb(172, 166, 166);
+}
+/* navigation */
+.nav{
+    height: 25%;
+    width: 90%;
+}
+.turn-box, .btns{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.turn{
+    height: 2.5em;
+    width: 6em;
+    border: 2px solid rgba(223, 211, 211, 0.796);
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.turn .fa-x{
+    font-size: 1.5em;
+    color: #0a6ceb;
+    z-index: 2;
+}
+.turn .fa-o{
+    font-size: 1.7em;
+    color: #2ccece;
+    z-index: 1;
+}
+.crl{
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: #0a6ceb;
+    color: white;
+    position: absolute;
+    left: -2px;
+}
+.btns{
+    justify-content: space-around;
+}
+.reset, .newGame{
+    height: 3em;
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(175, 175, 175);
+    font-weight: bolder;
+    color: white;
+    border-radius: 1.5em;
+    border: none;
+}
+
+/* For Laptopes */
+@media (min-width:1024px){
+    .cnt_btn:hover{
+        background-color: aliceblue;
+    }
+    .reset:hover, .newGame:hover{
+        background-color: silver;
+    }
+    @keyframes normal-incr {
+        from{
+            width: 0vw;
+        } to {
+            width: 17vw;
+        }
+    }
+    @keyframes cross-incr {
+        from{
+            width: 0vw;
+        } to {
+            width: 20vw;
+        }
+    }
+}
+
+/* For Tabs */
+@media (min-width:601px) and (max-width:1023px) {
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
+    @keyframes normal-incr {
+        from{
+            width: 0px;
+        } to {
+            width: 320px;
+        }
+    }
+    @keyframes cross-incr {
+        from{
+            width: 0px;
+        } to {
+            width: 360px;
+        }
+    }
+}
+
+/* For Mobile */
+@media (max-width: 600px) {
+    .choose{
+        width: 90%;
+    }
+    .container{
+        height: 180vw;
+        width: 100vw;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    @keyframes normal-incr {
+        from{
+            width: 0vw;
+        } to {
+            width: 64vw;
+        }
+    }
+    @keyframes cross-incr {
+        from{
+            width: 0vw;
+        } to {
+            width: 70vw;
+        }
+    }
+}
+
+/* animation */
+.anim-nor{
+    animation: normal-incr 1s linear forwards;
+}
+.anim-crs{
+    animation: cross-incr 1s linear forwards;
+}
+
+/* classes use in js */
+.right-shift{
+        transition: all 0.3s linear;
+        background-color: #2ccece;
+        transform: translateX(47px);
+}
+.left-shift{
+        transition: all 0.3s linear;
+        background-color: #0a6ceb;
+        transform: translateX(0px);
+}
+.disable{
+    pointer-events: none;
+    cursor: not-allowed;
+}
