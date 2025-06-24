@@ -21,7 +21,7 @@ if(form) {
 
 
 //taking elements from DOM of game_page.html
-let score = document.querySelectorAll(".score-box input");
+let score = document.querySelectorAll(".score-box span");
 let gmBox = document.querySelector(".game-box");
 let line = document.querySelector(".line");
 let boxes = document.querySelectorAll(".box");
@@ -40,7 +40,7 @@ function inp_turn(){
   turn = localStorage.getItem("choice");
   localStorage.clear();
 }
-function trn_highliter(turn){
+function trn_highliter(){
   if(turn === 'O'){
     i[0].style.color = "#0a6ceb";
     btn.classList.remove("left-shift");
@@ -110,10 +110,10 @@ function winner() {
     if (pos1Val !== "" && pos1Val === pos2Val && pos2Val === pos3Val) {
       if (pos1Val.includes("fa-o")) {
         p1 += 1;
-        score[0].value = p1;
+        score[0].innerText = p1;
       } else if (pos1Val.includes("fa-x")) {
         p2 += 1;
-        score[1].value = p2;
+        score[1].innerText = p2;
       }
       gmBox.classList.add("disable");
       line_draw(i);
@@ -122,7 +122,7 @@ function winner() {
   t++;
   if(t==9){
     p3 += 1;
-    score[2].value = p3;
+    score[2].innerText = p3;
   }
 }
 
@@ -160,15 +160,15 @@ ng.addEventListener("click", ()=>{
   select();
   inp_turn();
   p1=p2=p3=0;
-  score[0].value=score[1].value=score[2].value=0;
+  score[0].innerText=score[1].innerText=score[2].innerText=0;
 });
 
 //code which invoked as the game_page.html loaded
 if(window.location.pathname.endsWith("/game_page.html")) {
   inp_turn();
   trn_highliter();
-  score[0].value = p1;
-  score[1].value = p2;
-  score[2].value = p3;
+  score[0].innerText = p1;
+  score[1].innerText = p2;
+  score[2].innerText = p3;
   line.style.display = "none";
 }

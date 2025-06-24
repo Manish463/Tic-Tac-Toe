@@ -90,6 +90,7 @@ input[type="radio"]:checked::before {
     box-shadow: 0px 0px 5px 0px rgb(130, 122, 122);
     background-color: #fff;
 }
+
 /* Game Page (gamepage.html) */
 .container{
     height: 47.5vw;
@@ -114,32 +115,37 @@ h1{
     flex-direction: row;
 }
 .o, .x, .draw{
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     font-weight: 700;
 }
-.o, .o input{
+.score-box p{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.o, .o span{
     color: #2ccece;
 }
-.x, .x input{
+.x, .x span{
     color: #0a6ceb;
 }
-.draw, .draw input{
+.draw, .draw span{
     color: rgb(105, 62, 62);
 }
 .score-box i{
-    font-size: 1.8em;
+    font-size: 2em;
 }
-.score-box input{
-    width: 2.5em;
-    text-align: right;
-    border: none;
-    background-color: cornsilk;
-    font-size: 1.2em;
+.score-box span{
+    font-size: 1.3em;
     font-weight: 700;
 }
+
 /* game box */
 .game-box{
     height: 310px;
