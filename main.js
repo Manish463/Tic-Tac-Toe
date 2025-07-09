@@ -55,16 +55,8 @@ function trn_highliter(){
 }
 function line_draw(i){
   line.style.display = "block";
-  let yUnit;
-
-  if (window.matchMedia("(min-width: 1024px)").matches) {
-    yUnit = "6.3vw";
-  } else if (window.matchMedia("(max-width: 600px)").matches) {
-    yUnit = "24vw";
-  } else {
-    yUnit = "7em";
-  }
-
+  let yUnit = "102px";
+  
   switch (i) {
     case 0:
       line.style.transform = `translateY(-${yUnit})`;
